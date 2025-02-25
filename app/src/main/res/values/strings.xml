@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WetherFit</string>
+    <string name="location_permission_dialog_description">Для предоставления точных данных о погоде в вашем городе, нам необходимо получить доступ к вашей текущей локации. Это позволит автоматически определить ваше местоположение и отобразить актуальную информацию о погодных условиях. Ваши данные используются исключительно для этой цели и не передаются третьим лицам. Спасибо за понимание!</string>
+    <string name="location_permission_dialog_title">Предоставление доступа к геолокации</string>
+    <string name="location_permission_dialog_button_dismiss">Отклонить</string>
+    <string name="location_permission_dialog_button_access">Дальше</string>
+    <string name="condition_precipitation_description">Ожидаются осадки</string>
+    <string name="condition_no_precipitation_description">Осадки не ожидаются</string>
+    <string name="location_permission_denied_dialog_description">Мы не можем получить актуальную погоду в вашем регионе. Для предоставления данных о вашем местоположении перейдите в настройки.</string>
+    <string name="location_permission_denied_dialog_button_access">Перейти в настройки</string>
+    <string name="weather_screen_temperature_description">Температура: %1$s°</string>
+    <string name="weather_screen_workout_precipitation_message">Ожидается плохая погода. Советуем остаться дома и сделать 3 подхода по 10 отжиманий.</string>
+    <string name="weather_screen_workout_no_precipitation_message">Ожидается хорошая погода. Можете выходить на пробежку и сделать 3 подхода по 1км.</string>
 </resources>

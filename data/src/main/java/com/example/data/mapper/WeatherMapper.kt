@@ -6,14 +6,14 @@ import com.example.dmain.model.Weather
 internal object WeatherMapper {
 
     fun WeatherResponse.toData(): Weather {
-        val forecastday = forecast.forecastday.first().day
-        val willItRain = forecastday.dailyWillItRain == 1
-        val willItSnow = forecastday.dailyWillItSnow == 1
+        val forecastday = forecast.forecastday?.firstOrNull()?.day
+        val willItRain = forecastday?.dailyWillItRain == 1
+        val willItSnow = forecastday?.dailyWillItSnow == 1
         return Weather(
-            temperature = forecastday.avgtempC,
+            temperature = forecastday?.avgtempC ?: 0.0,
             conditions = if (willItSnow or willItRain) Weather.Condition.Precipitation
             else Weather.Condition.NoPrecipitation,
-            iconUrl = forecastday.condition.icon,
+            iconUrl = "https:${forecastday?.condition?.icon ?: "//"}",
         )
     }
 }

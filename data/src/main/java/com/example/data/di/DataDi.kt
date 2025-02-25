@@ -1,6 +1,5 @@
 package com.example.data.di
 
-import android.system.Os.bind
 import com.example.data.RepositoryImpl
 import com.example.data.Storage
 import com.example.data.storage.remote.StorageImpl

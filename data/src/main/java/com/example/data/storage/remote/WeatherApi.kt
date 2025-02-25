@@ -7,13 +7,14 @@ import io.ktor.http.ContentType
 import io.ktor.http.appendEncodedPathSegments
 import io.ktor.http.contentType
 
-private const val WEATHER_BASE_URL = "http://api.weatherapi.com/v1/"
-private const val API = "??????"
+private const val API = "???????"
+private const val VERSION = "v1"
+private const val CHAPTER = "forecast.json"
 
-internal suspend fun HttpClient.getWeather(location: String): WeatherResponse =
+internal suspend fun HttpClient.getWeather(location: String): String =
     get {
         url {
-            appendEncodedPathSegments(WEATHER_BASE_URL, "forecast.json")
+            appendEncodedPathSegments(VERSION, CHAPTER)
             parameters.append(name = "key", value = API)
             parameters.append(name = "q", value = location)
         }
